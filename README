@@ -20,6 +20,6 @@ load_namespaces produces the following message:
 
 This was tested with:
 	Perl - 5.10.1
-	DBIx::Class  - 0.08127
+	DBIx::Class  - 0.08127 and 0.08191
 	Moose  - 1.17
 
