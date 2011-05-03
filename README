@@ -1,0 +1,25 @@
+This is an example of inheriting from a DBIx::Class Result Class, and the 
+impacts on the ResultSet Classes from doing so. When the test is run the
+load_namespaces produces the following message:
+
+
+	DBIx::Class::Schema::load_namespaces(): We found ResultSet class
+	'Schema::Test:: ResultSet::ProductChild2' for 'ProductChild2', but it seems
+	that you had already set 'ProductChild2' to use
+	'Schema::Test::ResultSet::ProductParent' instead at
+	/Users/mgrimes/src/websites/kci/tmp/dbic-inheritance/lib/Schema/Test.pm
+	line 7
+
+	DBIx::Class::Schema::load_namespaces(): We found ResultSet class
+	'Schema::Test:: ResultSet::ProductChild' for 'ProductChild', but it seems
+	that you had already s et 'ProductChild' to use
+	'Schema::Test::ResultSet::ProductParent' instead at
+	/Users/mgrimes/src/websites/kci/tmp/dbic-inheritance/lib/Schema/Test.pm
+	line 7
+
+
+This was tested with:
+	Perl - 5.10.1
+	DBIx::Class  - 0.08127
+	Moose  - 1.17
+
